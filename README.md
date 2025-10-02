@@ -20,32 +20,40 @@ As imagens processadas são salvas em uma subpasta chamada **Redimensionadas** d
 - Python 3.8+  
 - Bibliotecas Python:
   ```bash
-  pip install pillow
+  pip install -r requirements.txt
+  ```
 
-  ▶️ Como usar
+---
 
-Clone este repositório:
+## ▶️ Como usar
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   ```
 
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+2. Navegue até a pasta do projeto:
+   ```bash
+   cd nome-do-repositorio
+   ```
 
+3. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Navegue até a pasta do projeto:
+4. Execute o script:
+   ```bash
+   python redimensionar.py
+   ```
 
-cd nome-do-repositorio
+5. Selecione a pasta que contém as imagens.  
+6. Aguarde o processamento.  
+7. As imagens convertidas estarão na pasta **Redimensionadas** criada automaticamente.  
 
+---
 
-Execute o script:
-
-python redimensionar.py
-
-
-Selecione a pasta que contém as imagens.
-
-Aguarde o processamento.
-
-As imagens convertidas estarão na pasta Redimensionadas criada automaticamente.
-
-📊 Exemplo de saída no terminal
+## 📊 Exemplo de saída no terminal
+```
  Redimensionada e convertida: foto1.png -> foto1.jpeg
  Redimensionada e convertida: imagem2.webp -> imagem2.jpeg
  Erro com corrompida.bmp: cannot identify image file
@@ -55,9 +63,14 @@ Total de imagens encontradas: 5
 Redimensionadas e salvas em JPEG: 4
 Falharam: 1
 As imagens redimensionadas estão na pasta 'Redimensionadas' dentro da pasta selecionada.
+```
 
-📝 Observações
+---
 
-Caso alguma imagem esteja corrompida ou em formato não suportado, ela será ignorada e reportada no relatório.
+## 📝 Observações
+- Caso alguma imagem esteja corrompida ou em formato não suportado, ela será ignorada e reportada no relatório.  
+- Imagens com fundo transparente terão o fundo convertido para **branco**.  
 
-Imagens com fundo transparente terão o fundo convertido para branco.
+---
+
+👨‍💻 Desenvolvido em Python com [Pillow](https://python-pillow.org/).
